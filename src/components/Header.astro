@@ -1,8 +1,15 @@
+---
+import Briefcase from "./icons/Briefcase.astro";
+import Code from "./icons/Code.astro";
+import Home from "./icons/Home.astro";
+---
+
 <header
   class={`
     flex justify-center items-center
     mx-auto
     py-5
+    px-2
     sticky top-0
     w-full xl:w-[1120px]
     z-10
@@ -18,17 +25,37 @@
     `}
   >
     <a
-      class="hover:bg-white/10 rounded-full px-3 transition"
-      href="#experiencia">Experiencia</a
+      data-te-toggle="tooltip"
+      title="Inicio"
+      class="hover:bg-white/10 rounded-full px-3 transition text-xs sm:text-md"
+      href="#home"
     >
-    <a class="hover:bg-white/10 rounded-full px-3 transition" href="#proyectos"
-      >Proyectos</a
+      <Home />
+    </a>
+
+    <a
+      data-te-toggle="tooltip"
+      title="Experiencia Laboral"
+      class="hover:bg-white/10 rounded-full px-3 transition text-xs sm:text-md"
+      href="#experiencia"
     >
-    <a class="hover:bg-white/10 rounded-full px-3 transition" href="#sobre-mi"
-      >Sobre mí</a
+      <Briefcase />
+    </a>
+    <a
+    data-te-toggle="tooltip"
+    title="Proyectos"
+      class="hover:bg-white/10 rounded-full px-3 transition text-xs sm:text-md"
+      href="#proyectos"
     >
-    <a class="hover:bg-white/10 rounded-full px-3 transition" href="#contacto"
-      >Contacto</a
+      <Code />
+    </a>
+    <!-- <a
+      class="hover:bg-white/10 rounded-full px-3 transition text-xs sm:text-md"
+      href="#sobre-mi">Sobre mí</a
     >
+    <a
+      class="hover:bg-white/10 rounded-full px-3 transition text-xs sm:text-md"
+      href="#contacto">Contacto</a
+    > -->
   </nav>
 </header>
