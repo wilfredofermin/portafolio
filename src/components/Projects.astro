@@ -16,20 +16,31 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "bsControl | Active Directory",
     description:
-      "Created from scratch with Next.js and Tailwind CSS. It's a library with SVG logos from the most popular brands. Optimized for SEO and performance.",
+      "Sistema de administracion de accesos generales para el active directory",
     link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+    github: "https://github.com/wilfredofermin/bscontrol",
     image: "/projects/svgl.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
+
+  {
+    title: "iqbost | Test",
+    description:
+      "Sistema de evaluacion test IQ",
+    link: "https://iqboost.mobi/",
+    github: "#",
+    image: "/projects/iqboost.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
 ]
+
 ---
 
 {
   PROJECTS.map(({ image, title, description, tags }) => (
-    <article>
+    <article class="mb-8">
       <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
         {title}
       </h3>
