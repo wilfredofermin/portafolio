@@ -2,9 +2,10 @@
 import NextJS from "./icons/NextJS.astro"
 import VueJS from "./icons/VueJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import Laravel from "./icons/Laravel.astro"
 
 const TAGS = {
-  NEXT: {
+  VUEJS: {
     name: "Vue.js",
     class: "bg-black text-white",
     icon: VueJS,
@@ -14,16 +15,22 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+
+  LARAVEL: {
+    name: "Laravel ",
+    class: "bg-[#003159] text-white",
+    icon: Laravel,
+  },
 }
 const PROJECTS = [
   {
-    title: "bsControl | Active Directory",
+    title: "vControl | Active Directory",
     description:
       "Sistema de administracion de accesos generales para el active directory",
-    link: "https://svgl.vercel.app/",
+    link: "#",
     github: "https://github.com/wilfredofermin/bscontrol",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/vcontrol.webp",
+    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL],
   },
 
   {
@@ -33,18 +40,18 @@ const PROJECTS = [
     link: "https://iqboost.mobi/",
     github: "#",
     image: "/projects/iqboost.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.VUEJS, TAGS.TAILWIND],
   },
 ]
 
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags }) => (
+  PROJECTS.map(({ image, title, description, tags,link }) => (
     <article class="mb-8">
-      <h3 class="text-2xl font-semiboldtext-yellow-400 mb-2">
+      <a href={link} target="_blank" class="text-2xl font-semiboldtext-yellow-400 mb-2">
         {title}
-      </h3>
+      </>
       <p class="text-lg mb-4 text-pretty text-white">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
