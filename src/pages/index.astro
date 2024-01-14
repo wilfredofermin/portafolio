@@ -1,17 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
-import Briefcase from "../components/icons/Briefcase.astro";
-import CodeIcon from "../components/icons/Code.astro";
-import GitLabIcon from "../components/icons/GitLab.astro";
 import Projects from "../components/Projects.astro";
 import About from "../components/About.astro";
-import Perfil from "../components/icons/Perfil.astro";
+import Intro from "../components/Intro.astro";
 ---
 
 <Layout
@@ -19,61 +12,31 @@ import Perfil from "../components/icons/Perfil.astro";
   description="Desarrollador Web "
 >
   <main class="px-4">
-    <SectionContainer id="home" class="mx-auto pb-32 pt-11">
-      <img
-        class="rounded-full size-24 mb-4 flex justify-center mx-auto border-2"
-        src="/projects/wfermin.webp"
-        alt="wilfredo fermin photo"
-      />
-
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-10 text-center "
-      >
-        Hey <a class="animate-pulse font-semibold ">👋<a/>, soy Wilfredo!  <a
-          href="https://linkedin.com/in/wilfredofermin"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-        </a>
-        <span class="text-yellow-400 text-xl">
-          Desarrollador Full Stack
-        </span>
-      </h1>
-
-      <nav class="flex gap-3 mt-4 flex-wrap content-center justify-center">
-        <SocialPill href="https://linkedin.com/in/wilfredofermin">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/wilfredofermin">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="https://gitlab.com/wilfredofermin">
-          <GitLabIcon class="size-4 md:size-6" />
-          GitLab
-        </SocialPill>
-        <SocialPill href="mailto:wilfredofermin@hotmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          wilfredofermin@hotmail.com
-        </SocialPill>
-      </nav>
+    <div id="home" class="mb-20"></div>
+    <SectionContainer class="mx-auto">
+      <Intro />
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
+    <div id="experiencia" class="mb-20"></div>
+
+    <SectionContainer>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="proyectos">
-      <div class="text-center sm:text-left  before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-yellow-400">
+    <div id="proyectos" class="mb-15"></div>
+    <SectionContainer>
+      <div
+        class="text-center sm:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-yellow-400"
+      >
         <h3 class="text-3xl font-semibold text-white">Proyectos</h3>
       </div>
       <Projects />
     </SectionContainer>
 
     <SectionContainer id="sobre">
-      <div class="text-center sm:text-left  before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-yellow-400">
+      <div
+        class="text-center sm:text-left before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:dark:bg-yellow-400"
+      >
         <h3 class="text-3xl font-semibold text-white">Sobre me</h3>
       </div>
       <About />
