@@ -63,7 +63,7 @@ const PROJECTS = [
     link: "https://iqboost.mobi/",
     github: "#",
     image: "/projects/iqboost.webp",
-    tags: [TAGS.VUEJS, TAGS.TAILWIND,TAGS.STRIPE,TAGS.LANG],
+    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.STRIPE, TAGS.LANG],
   },
 
   {
@@ -73,7 +73,7 @@ const PROJECTS = [
     link: "#",
     github: "https://github.com/wilfredofermin/bscontrol",
     image: "/projects/vcontrol.webp",
-    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL, TAGS.PHP,TAGS.MYSQL],
+    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL, TAGS.PHP, TAGS.MYSQL],
   },
 ];
 ---
@@ -81,11 +81,7 @@ const PROJECTS = [
 {
   PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="mb-6 p-4">
-      <a
-        href={link}
-        target="_blank"
-        class="text-2xl font-semibold mb-2"
-      >
+      <a href={link} target="_blank" class="text-2xl font-semibold mb-2">
         {title}
       </a>
       <p class="text-lg mb-4 text-pretty text-white">{description}</p>
@@ -111,3 +107,27 @@ const PROJECTS = [
   ))
 }
 
+<style>
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+  img {
+    view-timeline: --image;
+
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+  }
+</style>
