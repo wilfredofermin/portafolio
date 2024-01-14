@@ -20,7 +20,7 @@ const TAGS = {
 
   ASTROJS: {
     name: " Astro ",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: AstroJS,
   },
 
@@ -39,36 +39,36 @@ const TAGS = {
 
   PHP: {
     name: "Php",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: Php,
   },
 
   LARAVEL: {
     name: "Laravel ",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: Laravel,
   },
 
   TAILWIND: {
     name: "Tailwind",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: Tailwind,
   },
   BOOSTRAP: {
     name: "Boostrap",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: Bootstrap,
   },
 
   STRIPE: {
     name: "Stripe",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: Stripe,
   },
 
   MYSQL: {
     name: "MySql",
-    class: "bg-[#003159] text-white",
+    class: "bg-black text-white",
     icon: MySQL,
   },
 };
@@ -105,7 +105,7 @@ const SKILL = [
           class="text-2xl font-semiboldtext-yellow-400 mb-2"
         ></a>
         <p class="text-lg mb-4 text-pretty text-white">{description}</p>
-        <ul class="flex gap-x-2 flex-row mb-2">
+        <ul class="flex gap-x-2 flex-row mb-2 flex-wrap">
           {tags.map((tag) => (
             <li>
               <span
