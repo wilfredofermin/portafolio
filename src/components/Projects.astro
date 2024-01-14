@@ -1,7 +1,11 @@
 ---
-import VueJS from "./icons/VueJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Laravel from "./icons/Laravel.astro"
+import VueJS from "./icons/VueJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Laravel from "./icons/Laravel.astro";
+import Stripe from "./icons/Stripe.astro";
+import Lang from "./icons/Lang.astro";
+import Php from "./icons/Php.astro";
+import About from "./About.astro";
 
 const TAGS = {
   VUEJS: {
@@ -9,6 +13,12 @@ const TAGS = {
     class: "bg-black text-white",
     icon: VueJS,
   },
+  ASTROJS: {
+    name: " Astro JS",
+    class: "bg-[#003159] text-white",
+    icon: About,
+  },
+
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
@@ -20,8 +30,36 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Laravel,
   },
-}
+
+  STRIPE: {
+    name: "Stripe",
+    class: "bg-[#003159] text-white",
+    icon: Stripe,
+  },
+
+  LANG: {
+    name: "Lang",
+    class: "bg-[#003159] text-white",
+    icon: Lang,
+  },
+
+
+  PHP: {
+    name: "Php",
+    class: "bg-[#003159] text-white",
+    icon: Php,
+  },
+};
 const PROJECTS = [
+  {
+    title: "iqboost | Test IQ",
+    description: "Sistema de evaluacion test IQ ",
+    link: "https://iqboost.mobi/",
+    github: "#",
+    image: "/projects/iqboost.webp",
+    tags: [TAGS.VUEJS, TAGS.TAILWIND,TAGS.STRIPE,TAGS.LANG],
+  },
+
   {
     title: "vControl | Active Directory",
     description:
@@ -29,28 +67,21 @@ const PROJECTS = [
     link: "#",
     github: "https://github.com/wilfredofermin/bscontrol",
     image: "/projects/vcontrol.webp",
-    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL],
+    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL, TAGS.PHP],
   },
-
-  {
-    title: "iqboost | Test IQ",
-    description:
-      "Sistema de evaluacion test IQ",
-    link: "https://iqboost.mobi/",
-    github: "#",
-    image: "/projects/iqboost.webp",
-    tags: [TAGS.VUEJS, TAGS.TAILWIND],
-  },
-]
-
+];
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags,link }) => (
+  PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="mb-8">
-      <a href={link} target="_blank" class="text-2xl font-semiboldtext-yellow-400 mb-2">
+      <a
+        href={link}
+        target="_blank"
+        class="text-2xl font-semiboldtext-yellow-400 mb-2"
+      >
         {title}
-      </>
+      </a>
       <p class="text-lg mb-4 text-pretty text-white">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (

@@ -1,0 +1,123 @@
+---
+import VueJS from "./icons/VueJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Laravel from "./icons/Laravel.astro";
+import Stripe from "./icons/Stripe.astro";
+import Lang from "./icons/Lang.astro";
+import Php from "./icons/Php.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import AstroJS from "./icons/AstroJS.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import MySQL from "./icons/MySQL.astro";
+
+const TAGS = {
+  VUEJS: {
+    name: "Vue",
+    class: "bg-black text-white",
+    icon: VueJS,
+  },
+
+  ASTROJS: {
+    name: " Astro ",
+    class: "bg-[#003159] text-white",
+    icon: AstroJS,
+  },
+
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-black text-white",
+    icon: JavaScript,
+  },
+
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-black text-white",
+    icon: TypeScript,
+  },
+
+
+  PHP: {
+    name: "Php",
+    class: "bg-[#003159] text-white",
+    icon: Php,
+  },
+
+  LARAVEL: {
+    name: "Laravel ",
+    class: "bg-[#003159] text-white",
+    icon: Laravel,
+  },
+
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  BOOSTRAP: {
+    name: "Boostrap",
+    class: "bg-[#003159] text-white",
+    icon: Bootstrap,
+  },
+
+  STRIPE: {
+    name: "Stripe",
+    class: "bg-[#003159] text-white",
+    icon: Stripe,
+  },
+
+  MYSQL: {
+    name: "MySql",
+    class: "bg-[#003159] text-white",
+    icon: MySQL,
+  },
+};
+const SKILL = [
+  {
+    description: "Habilidades y tecnicas aplicadas",
+    link: "#",
+    github: "https://github.com/wilfredofermin/bscontrol",
+
+    tags: [TAGS.JAVASCRIPT,TAGS.VUEJS,TAGS.ASTROJS,TAGS.TYPESCRIPT,TAGS.PHP,TAGS.LARAVEL,TAGS.TAILWIND,TAGS.BOOSTRAP,TAGS.STRIPE,TAGS.MYSQL],
+  },
+];
+---
+
+<section class="rounded-3xl w-full mt-4">
+  <p class="text-yellow-400 text-xl">
+    🚀 Soy un desarrollador Full Stack con más de 5 años de experiencia.
+  </p>
+  <p class="text-lg mb-4 text-white text-pretty m-2">
+    Mi enfoque se centra en la creación de aplicaciones web eficientes y
+    atractivas, con un historial de éxito en la resolución de problemas técnicos
+    y la mejora del rendimiento. Mi pasión radica en la creación de soluciones
+    web de alta calidad y en mantenerme actualizado con las últimas tendencias
+    tecnológicas en el desarrollo frontend y backend.
+  </p>
+  <p class="text-xl">🔧 Skill</p>
+
+  {
+    SKILL.map(({ description, tags, link }) => (
+      <article class="mb-8">
+        <a
+          href={link}
+          target="_blank"
+          class="text-2xl font-semiboldtext-yellow-400 mb-2"
+        ></a>
+        <p class="text-lg mb-4 text-pretty text-white">{description}</p>
+        <ul class="flex gap-x-2 flex-row mb-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </article>
+    ))
+  }
+</section>
