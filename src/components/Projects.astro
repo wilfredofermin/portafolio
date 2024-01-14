@@ -6,6 +6,7 @@ import Stripe from "./icons/Stripe.astro";
 import Lang from "./icons/Lang.astro";
 import Php from "./icons/Php.astro";
 import About from "./About.astro";
+import MySQL from "./icons/MySQL.astro";
 
 const TAGS = {
   VUEJS: {
@@ -43,6 +44,11 @@ const TAGS = {
     icon: Lang,
   },
 
+  MYSQL: {
+    name: "MySql",
+    class: "bg-black text-white",
+    icon: MySQL,
+  },
 
   PHP: {
     name: "Php",
@@ -67,7 +73,7 @@ const PROJECTS = [
     link: "#",
     github: "https://github.com/wilfredofermin/bscontrol",
     image: "/projects/vcontrol.webp",
-    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL, TAGS.PHP],
+    tags: [TAGS.VUEJS, TAGS.TAILWIND, TAGS.LARAVEL, TAGS.PHP,TAGS.MYSQL],
   },
 ];
 ---
@@ -78,7 +84,7 @@ const PROJECTS = [
       <a
         href={link}
         target="_blank"
-        class="text-2xl font-semiboldtext-yellow-400 mb-2"
+        class="text-2xl font-semibold mb-2"
       >
         {title}
       </a>
@@ -104,3 +110,4 @@ const PROJECTS = [
     </article>
   ))
 }
+
