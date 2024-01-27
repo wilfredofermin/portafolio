@@ -15,13 +15,13 @@ const TAGS = {
     icon: VueJS,
   },
   ASTROJS: {
-    name: " Astro JS",
+    name: " Astro",
     class: "bg-black text-white",
     icon: About,
   },
 
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     class: "bg-black text-white",
     icon: Tailwind,
   },
@@ -85,11 +85,11 @@ const PROJECTS = [
         {title}
       </a>
       <p class="text-lg mb-4 text-pretty text-white">{description}</p>
-      <ul class="flex gap-x-2 flex-row mb-2">
+      <ul class="flex gap-x-2 flex-row mb-2 flex-wrap mt-2">
         {tags.map((tag) => (
           <li>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10 mb-2`}
             >
               <tag.icon class="size-4" />
               {tag.name}
