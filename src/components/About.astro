@@ -10,6 +10,7 @@ import JavaScript from "./icons/JavaScript.astro";
 import AstroJS from "./icons/AstroJS.astro";
 import TypeScript from "./icons/TypeScript.astro";
 import MySQL from "./icons/MySQL.astro";
+import Docker from "./icons/Docker.astro";
 
 const TAGS = {
   VUEJS: {
@@ -71,6 +72,12 @@ const TAGS = {
     class: "bg-black text-white",
     icon: MySQL,
   },
+
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: Docker,
+  },
 };
 const SKILL = [
   {
@@ -78,15 +85,13 @@ const SKILL = [
     link: "#",
     github: "https://github.com/wilfredofermin/bscontrol",
 
-    tags: [TAGS.JAVASCRIPT,TAGS.VUEJS,TAGS.ASTROJS,TAGS.TYPESCRIPT,TAGS.PHP,TAGS.LARAVEL,TAGS.TAILWIND,TAGS.BOOSTRAP,TAGS.STRIPE,TAGS.MYSQL],
+    tags: [TAGS.JAVASCRIPT,TAGS.VUEJS,TAGS.ASTROJS,TAGS.TYPESCRIPT,TAGS.PHP,TAGS.LARAVEL,TAGS.TAILWIND,TAGS.BOOSTRAP,TAGS.STRIPE,TAGS.MYSQL,TAGS.DOCKER],
   },
 ];
 ---
 
 <section class="rounded-3xl w-full mt-4 p-4">
-  <p class="text-yellow-400 text-xl">
-    🚀 Soy un desarrollador Full Stack con más de 5 años de experiencia.
-  </p>
+
   <p class="text-lg mb-4 text-white text-pretty m-2">
     Mi enfoque se centra en la creación de aplicaciones web eficientes y
     atractivas, con un historial de éxito en la resolución de problemas técnicos
@@ -109,7 +114,7 @@ const SKILL = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 mb-2 border border-white/10`}
               >
                 <tag.icon class="size-4" />
                 {tag.name}
