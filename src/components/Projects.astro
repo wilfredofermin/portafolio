@@ -7,8 +7,20 @@ import Lang from "./icons/Lang.astro";
 import Php from "./icons/Php.astro";
 import About from "./About.astro";
 import MySQL from "./icons/MySQL.astro";
+import Svelte from "./icons/Svelte.astro";
+import Cloudinary from "./icons/Cloudinary.astro";
 
 const TAGS = {
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-black text-white",
+    icon: Cloudinary,
+  },
+  SVELTEJS: {
+    name: " Svelte",
+    class: "bg-black text-white",
+    icon: Svelte,
+  },
   VUEJS: {
     name: "Vue.js",
     class: "bg-black text-white",
@@ -19,6 +31,7 @@ const TAGS = {
     class: "bg-black text-white",
     icon: About,
   },
+
 
   TAILWIND: {
     name: "Tailwind",
@@ -57,6 +70,15 @@ const TAGS = {
   },
 };
 const PROJECTS = [
+  {
+    title: "Remover Fondo ",
+    description: "Remueve el fondo potenciado con inteligencia artificial ",
+    link: "https://iqboost.mobi/",
+    github: "#",
+    image: "/projects/remover_fondo.webp",
+    tags: [TAGS.TAILWIND , TAGS.SVELTEJS , TAGS.CLOUDINARY],
+  },
+
   {
     title: "iqboost | Test IQ",
     description: "Sistema de evaluacion test IQ ",
